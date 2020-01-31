@@ -7,8 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8EFD501023E422AB0009C4F1 /* goat.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD500D23E422AA0009C4F1 /* goat.gif */; };
+		8EFD501123E422AB0009C4F1 /* tiger.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD500E23E422AA0009C4F1 /* tiger.gif */; };
+		8EFD501223E422AB0009C4F1 /* tiger1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD500F23E422AA0009C4F1 /* tiger1.gif */; };
+		8EFD501423E425D50009C4F1 /* goat1.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD501323E425D40009C4F1 /* goat1.gif */; };
+		8EFD501623E4268D0009C4F1 /* monkey.gif in Resources */ = {isa = PBXBuildFile; fileRef = 8EFD501523E4268C0009C4F1 /* monkey.gif */; };
+		8EFD501823E4464A0009C4F1 /* LandingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD501723E4464A0009C4F1 /* LandingViewController.swift */; };
+		8EFD501A23E447BF0009C4F1 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFD501923E447BF0009C4F1 /* GameViewController.swift */; };
 		8EFEB53E23E3FED80019A5B7 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEB53D23E3FED80019A5B7 /* AppDelegate.swift */; };
-		8EFEB54023E3FED80019A5B7 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8EFEB53F23E3FED80019A5B7 /* ViewController.swift */; };
 		8EFEB54323E3FED80019A5B7 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFEB54123E3FED80019A5B7 /* Main.storyboard */; };
 		8EFEB54523E3FED90019A5B7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8EFEB54423E3FED90019A5B7 /* Assets.xcassets */; };
 		8EFEB54823E3FED90019A5B7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8EFEB54623E3FED90019A5B7 /* LaunchScreen.storyboard */; };
@@ -34,9 +40,15 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8EFD500D23E422AA0009C4F1 /* goat.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = goat.gif; sourceTree = "<group>"; };
+		8EFD500E23E422AA0009C4F1 /* tiger.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tiger.gif; sourceTree = "<group>"; };
+		8EFD500F23E422AA0009C4F1 /* tiger1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = tiger1.gif; sourceTree = "<group>"; };
+		8EFD501323E425D40009C4F1 /* goat1.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = goat1.gif; sourceTree = "<group>"; };
+		8EFD501523E4268C0009C4F1 /* monkey.gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; path = monkey.gif; sourceTree = "<group>"; };
+		8EFD501723E4464A0009C4F1 /* LandingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LandingViewController.swift; sourceTree = "<group>"; };
+		8EFD501923E447BF0009C4F1 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		8EFEB53A23E3FED80019A5B7 /* DigiDino.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DigiDino.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		8EFEB53D23E3FED80019A5B7 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		8EFEB53F23E3FED80019A5B7 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		8EFEB54223E3FED80019A5B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		8EFEB54423E3FED90019A5B7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		8EFEB54723E3FED90019A5B7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -98,11 +110,17 @@
 			isa = PBXGroup;
 			children = (
 				8EFEB53D23E3FED80019A5B7 /* AppDelegate.swift */,
-				8EFEB53F23E3FED80019A5B7 /* ViewController.swift */,
+				8EFD501323E425D40009C4F1 /* goat1.gif */,
+				8EFD500D23E422AA0009C4F1 /* goat.gif */,
+				8EFD500E23E422AA0009C4F1 /* tiger.gif */,
+				8EFD500F23E422AA0009C4F1 /* tiger1.gif */,
+				8EFD501523E4268C0009C4F1 /* monkey.gif */,
 				8EFEB54123E3FED80019A5B7 /* Main.storyboard */,
 				8EFEB54423E3FED90019A5B7 /* Assets.xcassets */,
 				8EFEB54623E3FED90019A5B7 /* LaunchScreen.storyboard */,
 				8EFEB54923E3FED90019A5B7 /* Info.plist */,
+				8EFD501723E4464A0009C4F1 /* LandingViewController.swift */,
+				8EFD501923E447BF0009C4F1 /* GameViewController.swift */,
 			);
 			path = DigiDino;
 			sourceTree = "<group>";
@@ -229,9 +247,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8EFD501423E425D50009C4F1 /* goat1.gif in Resources */,
+				8EFD501623E4268D0009C4F1 /* monkey.gif in Resources */,
 				8EFEB54823E3FED90019A5B7 /* LaunchScreen.storyboard in Resources */,
 				8EFEB54523E3FED90019A5B7 /* Assets.xcassets in Resources */,
+				8EFD501123E422AB0009C4F1 /* tiger.gif in Resources */,
 				8EFEB54323E3FED80019A5B7 /* Main.storyboard in Resources */,
+				8EFD501223E422AB0009C4F1 /* tiger1.gif in Resources */,
+				8EFD501023E422AB0009C4F1 /* goat.gif in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -256,7 +279,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8EFEB54023E3FED80019A5B7 /* ViewController.swift in Sources */,
+				8EFD501A23E447BF0009C4F1 /* GameViewController.swift in Sources */,
+				8EFD501823E4464A0009C4F1 /* LandingViewController.swift in Sources */,
 				8EFEB53E23E3FED80019A5B7 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -433,6 +457,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG6FWK462R;
 				INFOPLIST_FILE = DigiDino/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -450,6 +475,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = LG6FWK462R;
 				INFOPLIST_FILE = DigiDino/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
