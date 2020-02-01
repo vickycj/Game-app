@@ -169,7 +169,19 @@ class GameViewController: UIViewController {
                 })
                 lionView.addSubview(lion)
             }
+            self.view.addSubview(lionView)
+        } else {
+            lionView.frame = CGRect(x: 0, y: self.view.frame.size.height - 120, width: self.view.frame.width, height: 120)
+            let lion = UIImageView()
+            lion.image = UIImage(named: "lion")
+            lion.frame = CGRect(x: self.view.frame.width - 180, y: 0, width: 120, height: 120)
+            lion.alpha = 0.5
+            lionView.addSubview(lion)
             
+            let label = UILabel(frame: CGRect(x: self.view.frame.width - 350, y: 0, width: 300, height: 120))
+            label.text = "Continue banking to collect LION"
+            label.textColor = .white
+            lionView.addSubview(label)
             self.view.addSubview(lionView)
         }
         
@@ -207,6 +219,20 @@ class GameViewController: UIViewController {
             }
             self.view.addSubview(tigerView)
             
+        } else {
+            tigerView.frame = CGRect(x: 0, y: 100, width: self.view.frame.width, height: 120)
+            let tiger = UIImageView()
+            let tigerGif = UIImage.gifImageWithName(name: "tiger")
+            tiger.image = tigerGif
+            tiger.frame = CGRect(x: 80, y: 0, width: 120, height: 120)
+            tiger.alpha = 0.5
+            tigerView.addSubview(tiger)
+            
+            let label = UILabel(frame: CGRect(x: 40, y: 0, width: 300, height: 120))
+            label.text = "Continue banking to collect TIGER"
+            label.textColor = .white
+            tigerView.addSubview(label)
+            self.view.addSubview(tigerView)
         }
         
         if goatCount > 0 {
@@ -234,6 +260,20 @@ class GameViewController: UIViewController {
                 })
                 goatView.addSubview(goat)
             }
+            self.view.addSubview(goatView)
+        }  else {
+            goatView.frame = CGRect(x: 0, y: self.view.frame.height - 100, width: self.view.frame.width/2, height: 120)
+            let goat = UIImageView()
+            let goatGif = UIImage.gifImageWithName(name: "goat1")
+            goat.image = goatGif
+            goat.frame = CGRect(x: 80, y: 0, width: 120, height: 120)
+            goat.alpha = 0.5
+            goatView.addSubview(goat)
+            
+            let label = UILabel(frame: CGRect(x: 40, y: -40, width: 300, height: 120))
+            label.text = "Continue banking to collect GOAT"
+            label.textColor = .white
+            goatView.addSubview(label)
             self.view.addSubview(goatView)
         }
         
@@ -376,8 +416,6 @@ extension UIImage {
             return nil
             
         }
-        
-        
         
         return UIImage.animatedImageWithSource(source: source)
         
