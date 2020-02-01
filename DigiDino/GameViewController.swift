@@ -40,7 +40,6 @@ class GameViewController: UIViewController {
     
     var userResponse : UserDataResponse!
     let getURL = "http://100.0.1.197:8080/digigame/getUserDetails?userId=%d"
-    
     let shareURL = "http://100.0.1.197:8080/digigame/shareAnimal"
 
     @IBOutlet weak var buttonShowStatus: UIButton!
@@ -48,12 +47,8 @@ class GameViewController: UIViewController {
     var selectedAnimal : Int = 0
     var selectedAnimalView : UIImageView = UIImageView()
     
-    
     @IBOutlet weak var trailingConstraint: NSLayoutConstraint!
-    //@IBOutlet weak var imageTrailingConstraint: NSLayoutConstraint!
-    
-    
-    
+
     var isShowingHint  = false
     
     @IBAction func close(_sender : AnyObject){
@@ -75,7 +70,7 @@ class GameViewController: UIViewController {
     }
     
     var lionCount = 0
-    
+
     var tigerCount = 0
     
     var goatCount = 0
@@ -105,42 +100,17 @@ class GameViewController: UIViewController {
     }
     
     func refresh() {
-//        userResponse = nil
-//        DispatchQueue.main.async() {
-//            self.lionView.removeFromSuperview()
-//            self.tigerView.removeFromSuperview()
-//            self.goatView.removeFromSuperview()
-//            self.monkeyView.removeFromSuperview()
-//            self.dinoView.removeFromSuperview()
-//            self.goatCount = 0
-//            self.monkeyCount = 0
-//            self.tigerCount = 0
-//            self.lionCount = 0
-//            self.dinoCount = 0
-//            self.updateView()
-//        }
-//        getUserData()
-//        DispatchQueue.main.async() {
-//            self.goatView.removeFromSuperview()
-//            self.selectedAnimalView.isHidden = true
-//        }
-        
-//        selectedAnimalView.alpha = 0
-//        for view in selectedAnimalView.subviews {
-//            view.isHidden = true
-//        }
-//        selectedAnimalView.layer.removeAllAnimations()
         if selectedAnimal == 1 {
             UIView.animate(withDuration: 2.0, animations: {
                 self.selectedAnimalView.frame = CGRect(x: -120, y: 0, width: 120, height: 120)
             })
         } else if selectedAnimal == 3 {
             UIView.animate(withDuration: 2.0, animations: {
-                self.selectedAnimalView.frame = CGRect(x: -120, y: 100, width: 120, height: 120)
+                self.selectedAnimalView.frame = CGRect(x: -120, y: 0, width: 120, height: 120)
             })
         } else if selectedAnimal == 4 {
             UIView.animate(withDuration: 2.0, animations: {
-                self.selectedAnimalView.frame = CGRect(x: self.view.frame.width, y: self.view.frame.size.height - 120, width: 120, height: 120)
+                self.selectedAnimalView.frame = CGRect(x: self.view.frame.width, y: 0, width: 120, height: 120)
             })
         } else {
             self.selectedAnimalView.isHidden = true
@@ -157,8 +127,8 @@ class GameViewController: UIViewController {
     
     func configurationTextField(textField: UITextField!) {
         if (textField) != nil {
-            self.textField = textField!        //Save reference to the UITextField
-            self.textField?.placeholder = "Some text";
+            self.textField = textField!
+            self.textField?.placeholder = "Sender details";
         }
     }
     
@@ -168,7 +138,6 @@ class GameViewController: UIViewController {
         alert.addAction(UIAlertAction(title: "Ok", style: .default, handler:{ (UIAlertAction) in
             if let toUserId = Int(self.textField?.text ?? "0") {
                 self.shareAnimal(animalValue: self.selectedAnimal, toUserId: toUserId)
-                //self.refresh()
             }
         }))
         self.present(alert, animated: true, completion: nil)
@@ -191,21 +160,14 @@ class GameViewController: UIViewController {
                 lion.isUserInteractionEnabled = true
                 lion.addGestureRecognizer(newTap)
                 lion.tag = 4
-                
                 lion.image = UIImage(named: "lion")
-                
                 lion.frame = CGRect(x: self.view.frame.width, y: 0, width: 120, height: 120)
                 
                 UIView.animate(withDuration: (TimeInterval(1.0 + CGFloat(i))), animations: {
-                    
                     let gapBetweenLions : CGFloat = CGFloat((self.lionCount*40)) - CGFloat((i-1) * 40)
-                    
                     lion.frame = CGRect(x: self.view.frame.width - lion.frame.width - 20 - gapBetweenLions, y: lion.frame.origin.y, width: lion.frame.width, height: lion.frame.height)
-                    
                 })
-                
                 lionView.addSubview(lion)
-                
             }
             
             self.view.addSubview(lionView)
@@ -248,7 +210,7 @@ class GameViewController: UIViewController {
         }
         
         if goatCount > 0 {
-            goatView.frame = CGRect(x: 0, y: self.view.frame.height - 100, width: self.view.frame.width, height: 120)
+            goatView.frame = CGRect(x: 0, y: self.view.frame.height - 100, width: self.view.frame.width/2, height: 120)
             
             for i in 1...goatCount {
                 

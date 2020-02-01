@@ -14,14 +14,11 @@ class LandingViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     @IBAction func goToGame(_sender : AnyObject){
         let storyBoard : UIStoryboard = UIStoryboard(name: "Main", bundle:nil)
         let nextViewController = storyBoard.instantiateViewController(withIdentifier: "gameView") as! GameViewController
-        //self.navigationController?.pushViewController(nextViewController, animated: true)
         self.present(nextViewController, animated: true, completion: nil)
     }
     
@@ -88,7 +85,7 @@ class LandingViewController: UIViewController {
             }
             if let data = data {
                 do {
-                    let json = try JSONSerialization.jsonObject(with: data, options: [])
+                    let _ = try JSONSerialization.jsonObject(with: data, options: [])
                     DispatchQueue.main.async {
                         self.showSuccessAlert()
                     }
@@ -113,15 +110,4 @@ class LandingViewController: UIViewController {
         }
         alert.show()
     }
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }
